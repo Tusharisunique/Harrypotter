@@ -34,8 +34,8 @@ def show_color_menu():
         cv2.putText(swatch, f"{color.title()}", (70, 40 + i * 50), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2)
 
     cv2.imshow("Choose your cloak color", swatch)
-    print("\n👕 Choose the color of your cloak (type one of these): red, green, blue, black")
-    color = input("👉 Enter cloak color: ").strip().lower()
+    print("\nChoose the color of your cloak (type one of these): red, green, blue, black")
+    color = input("Enter cloak color: ").strip().lower()
 
     cv2.destroyWindow("Choose your cloak color")
 
@@ -59,7 +59,7 @@ for i in range(30):
     frame = cv2.flip(frame, 1)
     background = frame
 
-print(f"✅ Background captured. Wear your {cloak_choice.upper()} cloak now!")
+print(f"Background captured. Wear your {cloak_choice.upper()} cloak now!")
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -87,7 +87,7 @@ while cap.isOpened():
 
     final_output = cv2.addWeighted(cloak_area, 1, non_cloak_area, 1, 0)
 
-    cv2.imshow("🧥 Invisibility Cloak - Press 'q' to Quit", final_output)
+    cv2.imshow("Invisibility Cloak - Press 'q' to Quit", final_output)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
