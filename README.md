@@ -14,7 +14,7 @@ Noise Reduction using morphological transformations for a cleaner output.
 - How It Works - 
 The magic is achieved through a simple, yet effective, computer vision technique:
 Background Capture: When the program starts, it first captures a few seconds of video to record a static background image of the scene without you or the cloak in it.
-Color Detection (Masking): In the live video feed, the program converts the colors from the BGR space to the HSV (Hue, Saturation, Value) space. HSV is much better for detecting specific colors. It then creates a "mask" that isolates only the pixels matching the chosen cloak color.
+Color Detection (Masking): In the live video feed, the program converts the colors from the BGR space to the HSV (Hue, Saturation, Value) space. HSV is much better for detecting specific colors. It then creates a "mask" that isolates only the pixels matching the chosen cloak color of your choice.
 
 - Image Segmentation: Using the mask, the program segments the live video into two parts:
 The area covered by the invisibility cloak.
